@@ -952,6 +952,7 @@ GameObject:
   - component: {fileID: 613018171}
   - component: {fileID: 613018172}
   - component: {fileID: 613018173}
+  - component: {fileID: 613018174}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1041,6 +1042,19 @@ MonoBehaviour:
   Player: {fileID: 975109527}
   Bullet: {fileID: 6511287154691070589, guid: bb581dfac5cf05c4ea03b63a2d19e766, type: 3}
   SpawnPoint: {fileID: 1321410687}
+--- !u!114 &613018174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613018168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9bb6dd155516f94684925a4079427dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 500
 --- !u!1 &646308039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1721,6 +1735,7 @@ GameObject:
   - component: {fileID: 1196793557}
   - component: {fileID: 1196793556}
   - component: {fileID: 1196793555}
+  - component: {fileID: 1196793558}
   m_Layer: 0
   m_Name: Player Camera
   m_TagString: MainCamera
@@ -1793,6 +1808,20 @@ Transform:
   m_Father: {fileID: 264325595}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 10.178, y: 0, z: 0}
+--- !u!114 &1196793558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196793554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e637fbdbdf041c43b7a1d772912e49a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CameraAxisTransform: {fileID: 264325595}
+  rotationSpeed: 500
 --- !u!1 &1255502001
 GameObject:
   m_ObjectHideFlags: 0
@@ -1971,7 +2000,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPoint: {fileID: 1862658393}
   cameraLink: {fileID: 1196793556}
-  targetInSkyDistance: 40
+  targetInSkyDistance: 20
 --- !u!1 &1444211054
 GameObject:
   m_ObjectHideFlags: 0
