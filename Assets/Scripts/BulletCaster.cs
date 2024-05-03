@@ -36,7 +36,7 @@ public class BulletCaster : MonoBehaviour
         }
         if (_shootingActivated)
         {
-            float spawnDelay = Random.Range(0.08f, 0.2f);
+            var spawnDelay = Random.Range(0.08f, 0.2f);
             Invoke("SpawnBullet", spawnDelay);
         }
     }
