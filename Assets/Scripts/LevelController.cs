@@ -3,6 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour
 {
+    public GameObject pauseScreen;
+    private bool LevelRestarted = false;
+
     public void LoadNextLevel()
     {
         var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -26,5 +29,20 @@ public class LevelController : MonoBehaviour
     {
         var currentLevel = PlayerPrefs.GetInt("currentLevel");
         SceneManager.LoadScene(currentLevel);
+        if (LevelRestarted)
+        {
+            ClosePauseScreen();
+        }
+    }
+
+    public void StartLevel()
+    {
+        LoadCurrentLevel();
+        //Invoke("ClosePauseScreen", 0.5f);
+    }
+
+    public void ClosePauseScreen()
+    {
+        pauseScreen.SetActive(false);
     }
 }
