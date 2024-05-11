@@ -21,7 +21,7 @@ public class WolfAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var direction = player.transform.position - transform.position;
+        /*var direction = player.transform.position - transform.position;
 
         _isPlayerNoticed = false;
         RaycastHit hit;
@@ -32,22 +32,23 @@ public class WolfAI : MonoBehaviour
                 _isPlayerNoticed = true;
                 Debug.Log("You are noticed!");
             }
-        }
+        }*/
 
         PatrolUpdate();
     }
 
     private void PatrolUpdate()
     {
-        if (_navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance)
+        _navMeshAgent.destination = player.transform.position;
+/*        if (_navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance)
         {
             PickNewPatrolPoint();
-        }
+        }*/
     }
 
-    private void PickNewPatrolPoint()
+/*    private void PickNewPatrolPoint()
     {
         LastPosition = patrolPoints[Random.Range(0, patrolPoints.Count)].position;
         _navMeshAgent.destination = patrolPoints[Random.Range(0, patrolPoints.Count)].position;
-    }
+    }*/
 }

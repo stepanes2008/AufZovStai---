@@ -6,7 +6,7 @@ public class BulletController : MonoBehaviour
 {
     public float speed;
     public GameObject Bullet;
-    public float damage = 25;
+    public float damage = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,22 +18,24 @@ public class BulletController : MonoBehaviour
     {
         MoveFixedUpdate();
     }
-    private void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag != "Player")
+        Debug.Log(collision);
+        if (collision.gameObject.GetComponent<WolfAI>() != null)
         {
             DestroyBullet();
-            //DamageEnemy(collision);
+            DamageEnemy(collision);
         }
     }
-    /*private void DamageEnemy(Collision collision)
+    private void DamageEnemy(Collision collision)
     {
+        Debug.Log(damage);
         var enemyHealth = collision.gameObject.GetComponent<EnemyHealth>();
         if (enemyHealth != null)
         {
             enemyHealth.DealDamage(damage);
         }
-    }*/
+    }
     private void DestroyEnemy(Collision enemy)
     {
         Destroy(enemy.gameObject);

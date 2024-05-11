@@ -7,12 +7,19 @@ public class PauseOnESC : MonoBehaviour
 {
     public GameObject pauseScreen;
     public GameObject gameplayScreen;
+    public GameObject gameStatsScreen;
+
+    private void Start()
+    {
+        Time.timeScale = 0;
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             /*SceneManager.LoadScene("MenuScene");*/
             pauseScreen.SetActive(true);
+            gameStatsScreen.SetActive(false);
             Time.timeScale = 0;
         }
     }
