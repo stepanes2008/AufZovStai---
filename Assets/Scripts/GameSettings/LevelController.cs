@@ -28,11 +28,12 @@ public class LevelController : MonoBehaviour
     public void LoadCurrentLevel()
     {
         var currentLevel = PlayerPrefs.GetInt("currentLevel");
+        Debug.Log(currentLevel);
         SceneManager.LoadScene(currentLevel);
-        if (LevelRestarted)
+/*        if (LevelRestarted)
         {
             ClosePauseScreen();
-        }
+        }*/
     }
 
     public void StartLevel()
@@ -41,8 +42,5 @@ public class LevelController : MonoBehaviour
         //Invoke("ClosePauseScreen", 0.5f);
     }
 
-    public void ClosePauseScreen()
-    {
-        pauseScreen.SetActive(false);
-    }
+
 }

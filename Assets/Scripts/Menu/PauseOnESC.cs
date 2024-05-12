@@ -8,6 +8,8 @@ public class PauseOnESC : MonoBehaviour
     public GameObject pauseScreen;
     public GameObject gameplayScreen;
     public GameObject gameStatsScreen;
+    public GameObject gameOverScreen;
+    public bool IsGamePaused = false;
 
     private void Start()
     {
@@ -18,6 +20,8 @@ public class PauseOnESC : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             /*SceneManager.LoadScene("MenuScene");*/
+            IsGamePaused = true;
+            gameOverScreen.SetActive(false);
             pauseScreen.SetActive(true);
             gameStatsScreen.SetActive(false);
             Time.timeScale = 0;
@@ -25,6 +29,7 @@ public class PauseOnESC : MonoBehaviour
     }
     public void ContinueGame()
     {
+        IsGamePaused = false;
         pauseScreen.SetActive(false);
         Time.timeScale = 1;
     }

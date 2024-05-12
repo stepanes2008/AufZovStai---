@@ -70,5 +70,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7574a82dc16ff634dbdba6bdf00d697c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpawnPoints: []
   IsWorking: 1
   wolf: {fileID: 8853291096405898932, guid: e0d491f22134d88478cc961a5d5ada84, type: 3}
+  _maxEnemiesCreated: 55

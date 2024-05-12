@@ -40,10 +40,17 @@ public class WolfAI : MonoBehaviour
     private void PatrolUpdate()
     {
         _navMeshAgent.destination = player.transform.position;
+        Debug.Log(player.transform.position);
+        //Debug.Log(_navMeshAgent.destination);
 /*        if (_navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance)
         {
             PickNewPatrolPoint();
         }*/
+    }
+
+    public void AddKill()
+    {
+        player.GetComponent<KillsCounter>().Kills++;
     }
 
 /*    private void PickNewPatrolPoint()

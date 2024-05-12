@@ -43,11 +43,14 @@ public class EnemyHealth : MonoBehaviour
             DestroyEnemy();
         }
     }
-    public void DestroyEnemy()
+    private void DestroyEnemy()
     {
-        _time += Time.deltaTime;
+        _time += 1;
         //GetComponent<Animator>().SetTrigger("Death");
-        Player.GetComponent<KillsCounter>().Kills += 1;
+        if (Death && _time == 1)
+        {
+            GetComponent<WolfAI>().AddKill();
+        }
         Destroy(gameObject);
     }
 }
