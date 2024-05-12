@@ -12,8 +12,24 @@ public class KillsCounter : MonoBehaviour
     public GameObject levelController;
     public int Kills = 0;
 
+    public int N;
+
     private void Start()
     {
+        int c = 0;
+        while (N != 0)
+        {
+            if (N % 2 == 0)
+            {
+                N /= 2;
+            }
+            else
+            {
+                N = N / 10;
+            }
+            c++;
+        }
+        Debug.Log(c);
         Kills = 0;
     }
 
