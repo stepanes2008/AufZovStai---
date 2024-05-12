@@ -207,6 +207,7 @@ GameObject:
   - component: {fileID: 5166526937443647235}
   - component: {fileID: 5166526937443647234}
   - component: {fileID: 7487505344752385343}
+  - component: {fileID: 3193606277218588543}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -321,9 +322,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 299419f86990edd4badb434e3aec79f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverText: {fileID: 0}
+  gameOverScreen: {fileID: 0}
   killsCountText: {fileID: 2258616103251516386, guid: df2f1799328f73c4db3dcfe911c9473a,
     type: 3}
+  levelController: {fileID: 0}
   Kills: 0
+--- !u!114 &3193606277218588543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5166526937443647233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c8d9a49f1f1ea447b5780319c5e3b72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  valueRectTransform: {fileID: 0}
+  gameOverScreen: {fileID: 0}
+  gameOverText: {fileID: 0}
+  restartTipText: {fileID: 0}
+  value: 100
+  _time: 0
+  _maxValue: 100
 --- !u!1 &5166526937544810787
 GameObject:
   m_ObjectHideFlags: 0

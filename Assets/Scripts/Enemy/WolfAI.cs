@@ -7,6 +7,7 @@ public class WolfAI : MonoBehaviour
 {
     public List<Transform> patrolPoints;
     public Move player;
+    public float damage = 33.4f;
 
     private NavMeshAgent _navMeshAgent;
     private Vector3 LastPosition;
@@ -35,12 +36,25 @@ public class WolfAI : MonoBehaviour
         }*/
 
         PatrolUpdate();
+        AttackUpdate();
+    }
+
+    void AttackUpdate()
+    {
+        if (_navMeshAgent.pathPending)
+            return;
+        if (_navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance)
+        {
+            //Debug.Log(_navMeshAgent.stoppingDistance);
+            Debug.Log(_navMeshAgent.remainingDistance);
+            player.GetComponent<PlayerHealth>().DealDamage(damage * Time.deltaTime, gameObject);
+            //GetComponent<Animator>().SetTrigger("Attack");
+        }
     }
 
     private void PatrolUpdate()
     {
         _navMeshAgent.destination = player.transform.position;
-        Debug.Log(player.transform.position);
         //Debug.Log(_navMeshAgent.destination);
 /*        if (_navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance)
         {
