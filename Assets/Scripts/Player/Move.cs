@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
+    public GameObject playerBody;
     public float jumpForce;
     private float _fallVelocity = 0f;
     public float speed = 5f;
@@ -21,52 +22,55 @@ public class Move : MonoBehaviour
     {
         //Player.GetComponent<Animator>().SetBool("isRunning", false);
 
-        _move = Vector3.zero;
-        if (Input.GetKeyDown(KeyCode.Space) && _controller.isGrounded)
+        if (!GetComponent<PlayerHealth>().isDead)
         {
-            _fallVelocity = -jumpForce;
-            //Player.GetComponent<Animator>().SetBool("isRunning", true);
+            _move = Vector3.zero;
+            if (Input.GetKeyDown(KeyCode.Space) && _controller.isGrounded)
+            {
+                _fallVelocity = -jumpForce;
+                //Player.GetComponent<Animator>().SetBool("isRunning", true);
+            }
+            if (Input.GetKey(KeyCode.W))
+            {
+                _move += transform.forward;
+                playerBody.GetComponent<Animator>().SetBool("isRunning", true);
+            }
+            if (Input.GetKeyUp(KeyCode.W))
+            {
+                _move += transform.forward;
+                playerBody.GetComponent<Animator>().SetBool("isRunning", false);
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                _move -= transform.right;
+                playerBody.GetComponent<Animator>().SetBool("isRunning", true);
+            }
+            if (Input.GetKeyUp(KeyCode.A))
+            {
+                _move -= transform.right;
+                playerBody.GetComponent<Animator>().SetBool("isRunning", false);
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                _move -= transform.forward;
+                playerBody.GetComponent<Animator>().SetBool("isRunning", true);
+            }
+            if (Input.GetKeyUp(KeyCode.S))
+            {
+                _move -= transform.forward;
+                playerBody.GetComponent<Animator>().SetBool("isRunning", false);
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                _move += transform.right;
+                playerBody.GetComponent<Animator>().SetBool("isRunning", true);
+            }
+            if (Input.GetKeyUp(KeyCode.D))
+            {
+                _move += transform.right;
+                playerBody.GetComponent<Animator>().SetBool("isRunning", false);
+            }
         }
-        if (Input.GetKey(KeyCode.W))
-        {
-            _move += transform.forward;
-            //Player.GetComponent<Animator>().SetBool("isRunning", true);
-        }
-        if (Input.GetKeyUp(KeyCode.W))
-        {
-            _move += transform.forward;
-            //Player.GetComponent<Animator>().SetBool("isRunning", false);
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            _move -= transform.right;
-            //Player.GetComponent<Animator>().SetBool("Left", true);
-        }
-        if (Input.GetKeyUp(KeyCode.A))
-        {
-            _move -= transform.right;
-            //Player.GetComponent<Animator>().SetBool("Left", false);
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            _move -= transform.forward;
-            //Player.GetComponent<Animator>().SetBool("Back", true);
-        }
-        if (Input.GetKeyUp(KeyCode.S))
-        {
-            _move -= transform.forward;
-            //Player.GetComponent<Animator>().SetBool("Back", false);
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            _move += transform.right;
-            //Player.GetComponent<Animator>().SetBool("Right", true);
-        }
-        if (Input.GetKeyUp(KeyCode.D))
-        {
-            _move += transform.right;
-            //Player.GetComponent<Animator>().SetBool("Right", false);
-        }        
     }
 
     void FixedUpdate()
