@@ -150,7 +150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a22562e2cc7751444a981f7f6e693e11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 6
+  playerBody: {fileID: 0}
+  jumpForce: 8
   speed: 12
   Player: {fileID: 5166526937443647233}
 --- !u!143 &5166526937443647245

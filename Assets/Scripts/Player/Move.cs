@@ -28,7 +28,7 @@ public class Move : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space) && _controller.isGrounded)
             {
                 _fallVelocity = -jumpForce;
-                //Player.GetComponent<Animator>().SetBool("isRunning", true);
+                playerBody.GetComponent<Animator>().SetTrigger("Jump");
             }
             if (Input.GetKey(KeyCode.W))
             {
