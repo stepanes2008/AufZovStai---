@@ -11,6 +11,7 @@ public class PauseOnESC : MonoBehaviour
     public GameObject gameStatsScreen;
     public GameObject gameOverScreen;
     public bool IsGamePaused = false;
+    private bool canPlay = true;
 
     private void Start()
     {
@@ -32,6 +33,17 @@ public class PauseOnESC : MonoBehaviour
             {
                 GetComponent<LevelController>().LoadCurrentLevel();
             }
+        }
+        if (Time.timeScale == 0)
+        {
+            GetComponent<AudioSource>().Stop();
+            canPlay = true;
+        }
+        else if (canPlay)
+        {
+            Debug.Log(1);
+            GetComponent<AudioSource>().Play();
+            canPlay = false;
         }
     }
     public void ContinueGame()

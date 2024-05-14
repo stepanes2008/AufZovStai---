@@ -20,7 +20,6 @@ public class BulletController : MonoBehaviour
     }
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision);
         if (collision.gameObject.GetComponent<WolfAI>() != null)
         {
             DestroyBullet();
@@ -29,7 +28,6 @@ public class BulletController : MonoBehaviour
     }
     private void DamageEnemy(Collision collision)
     {
-        Debug.Log(damage);
         var enemyHealth = collision.gameObject.GetComponent<EnemyHealth>();
         if (enemyHealth != null)
         {
