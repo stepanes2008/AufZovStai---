@@ -45,6 +45,7 @@ public class PlayerHealth : MonoBehaviour
         gameOverScreen.SetActive(true);
         gameOverText.GetComponent<TMP_Text>().text = "Game Over";
         restartTipText.GetComponent<TMP_Text>().text = "Press ESC to restart level";
-        Destroy(playerBody);
+        GetComponent<Move>().enabled = false;
+        GetComponent<CameraRotation>().enabled = false;
     }
 }
