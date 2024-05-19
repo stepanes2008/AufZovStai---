@@ -26,7 +26,7 @@ public class BulletCaster : MonoBehaviour
     }
     private void BulletUpdate()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !GetComponent<PlayerHealth>().isDead)
         {
             _shootingActivated = true;
             audioSource.Play();
