@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 187578668161787047}
   - component: {fileID: 1212893878636798548}
   - component: {fileID: 5921846054328055670}
+  - component: {fileID: 4699137124357040349}
   m_Layer: 0
   m_Name: Level Controller
   m_TagString: Untagged
@@ -74,3 +75,21 @@ MonoBehaviour:
   IsWorking: 1
   wolf: {fileID: 8853291096405898932, guid: e0d491f22134d88478cc961a5d5ada84, type: 3}
   _maxEnemiesCreated: 55
+--- !u!114 &4699137124357040349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187578668161787044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b35410a914afde4478e7f85f2a9999b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  pauseScreen: {fileID: 0}
+  gameplayScreen: {fileID: 0}
+  gameStatsScreen: {fileID: 0}
+  gameOverScreen: {fileID: 0}
+  IsGamePaused: 0

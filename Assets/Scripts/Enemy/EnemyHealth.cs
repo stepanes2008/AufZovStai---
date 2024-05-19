@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
+    public GameObject tigerBody;
+
     private bool Death = false;
     public GameObject Player;
     public GameObject HexEffectPrefab;
@@ -40,7 +42,8 @@ public class EnemyHealth : MonoBehaviour
         if (value <= 0)
         {
             Death = true;
-            DestroyEnemy();
+            tigerBody.GetComponent<Animator>().SetTrigger("Death");
+            Invoke("DestroyEnemy", 5);
         }
     }
     private void DestroyEnemy()

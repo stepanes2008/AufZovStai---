@@ -7,6 +7,7 @@ public class WolfAI : MonoBehaviour
 {
     public List<Transform> patrolPoints;
     public Move player;
+    public GameObject tigerBody;
     public float damage = 33.4f;
 
     private NavMeshAgent _navMeshAgent;
@@ -48,6 +49,7 @@ public class WolfAI : MonoBehaviour
             //Debug.Log(_navMeshAgent.stoppingDistance);
             Debug.Log(_navMeshAgent.remainingDistance);
             player.GetComponent<PlayerHealth>().DealDamage(damage * Time.deltaTime, gameObject);
+            tigerBody.GetComponent<Animator>().SetTrigger("Hit");
             //GetComponent<Animator>().SetTrigger("Attack");
         }
     }

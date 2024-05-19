@@ -29,13 +29,16 @@ public class BulletCaster : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             _shootingActivated = true;
+            audioSource.Play();
         }
         if (Input.GetMouseButtonUp(0))
         {
             _shootingActivated = false;
+            audioSource.Stop();
         }
         if (_shootingActivated)
         {
+            //audioSource.PlayOneShot(shootSound);
             var spawnDelay = Random.Range(0.08f, 0.2f);
             Invoke("SpawnBullet", spawnDelay);
         }
