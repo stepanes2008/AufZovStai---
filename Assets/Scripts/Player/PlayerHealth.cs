@@ -40,6 +40,7 @@ public class PlayerHealth : MonoBehaviour
     }
     public void DestroySelf()
     {
+        Debug.Log(value);
         isDead = true;
         gameOverScreen.SetActive(true);
         gameOverText.GetComponent<TMP_Text>().text = "Game Over";

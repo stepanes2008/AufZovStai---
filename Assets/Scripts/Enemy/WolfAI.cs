@@ -47,7 +47,6 @@ public class WolfAI : MonoBehaviour
         if (_navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance)
         {
             //Debug.Log(_navMeshAgent.stoppingDistance);
-            Debug.Log(_navMeshAgent.remainingDistance);
             player.GetComponent<PlayerHealth>().DealDamage(damage * Time.deltaTime, gameObject);
             tigerBody.GetComponent<Animator>().SetTrigger("Hit");
             //GetComponent<Animator>().SetTrigger("Attack");

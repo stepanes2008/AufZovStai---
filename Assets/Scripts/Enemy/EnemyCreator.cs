@@ -7,7 +7,7 @@ public class EnemyCreator : MonoBehaviour
     public GameObject[] SpawnPoints;
     public bool IsWorking = true;
     public WolfAI wolf;
-    private int Enemies = 10;
+    public int Enemies = 10;
     public int _maxEnemiesCreated = 50;
 
     void Start()
