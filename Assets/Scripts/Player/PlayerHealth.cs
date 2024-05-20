@@ -41,11 +41,17 @@ public class PlayerHealth : MonoBehaviour
     public void DestroySelf()
     {
         isDead = true;
-        Time.timeScale = 0;
         gameOverScreen.SetActive(true);
         gameOverText.GetComponent<TMP_Text>().text = "Game Over";
         restartTipText.GetComponent<TMP_Text>().text = "Press ESC to restart level";
+        playerBody.GetComponent<Animator>().SetTrigger("Death");
         GetComponent<Move>().enabled = false;
         GetComponent<CameraRotation>().enabled = false;
+        Invoke("DeathPause", 2);
+    }
+    private void DeathPause()
+    {
+        Debug.Log("+");
+        Time.timeScale = 0;
     }
 }

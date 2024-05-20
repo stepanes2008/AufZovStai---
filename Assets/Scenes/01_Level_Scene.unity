@@ -26559,6 +26559,31 @@ PrefabInstance:
       propertyPath: pauseScreen
       value: 
       objectReference: {fileID: 283434299}
+    - target: {fileID: 4699137124357040349, guid: cd9346fff7ab97b48973b218b8fd9a20,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 732619031}
+    - target: {fileID: 4699137124357040349, guid: cd9346fff7ab97b48973b218b8fd9a20,
+        type: 3}
+      propertyPath: pauseScreen
+      value: 
+      objectReference: {fileID: 387110523}
+    - target: {fileID: 4699137124357040349, guid: cd9346fff7ab97b48973b218b8fd9a20,
+        type: 3}
+      propertyPath: gameOverScreen
+      value: 
+      objectReference: {fileID: 1064083118}
+    - target: {fileID: 4699137124357040349, guid: cd9346fff7ab97b48973b218b8fd9a20,
+        type: 3}
+      propertyPath: gameplayScreen
+      value: 
+      objectReference: {fileID: 1268715996}
+    - target: {fileID: 4699137124357040349, guid: cd9346fff7ab97b48973b218b8fd9a20,
+        type: 3}
+      propertyPath: gameStatsScreen
+      value: 
+      objectReference: {fileID: 1208497406}
     - target: {fileID: 5921846054328055670, guid: cd9346fff7ab97b48973b218b8fd9a20,
         type: 3}
       propertyPath: wolf
