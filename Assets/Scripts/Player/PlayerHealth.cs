@@ -9,7 +9,9 @@ public class PlayerHealth : MonoBehaviour
     public GameObject gameOverScreen;
     public GameObject gameOverText;
     public GameObject restartTipText;
+    public GameObject healEffect;
 
+    public AudioClip healSound;
     public GameObject playerBody;
 
     public float value = 100;
@@ -21,6 +23,17 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         isDead = false;
+    }
+    public void AddHealth(float amount)
+    {
+        GetComponent<AudioSource>().PlayOneShot(healSound);
+        value += amount;
+        if (value > 100f)
+        {
+            value = 100f;
+        }
+        healEffect.GetComponent<ParticleSystem>().Play();
+        DrawHealthBar();
     }
     public void DealDamage(float damage, GameObject enemy)
     {
