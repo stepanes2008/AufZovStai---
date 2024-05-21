@@ -20,6 +20,6 @@ public class RotateByX : MonoBehaviour
         {
             X -= 360f;
         }
-        CameraAxisTransform.localEulerAngles = new Vector3(Mathf.Clamp(X, -30, 20), 0, 0);
+        CameraAxisTransform.localEulerAngles = new Vector3(Mathf.Clamp(X, -30, 35), 0, 0);
     }
 }

@@ -10,6 +10,8 @@ public class KillsCounter : MonoBehaviour
     public GameObject gameOverScreen;
     public GameObject killsCountText;
     public GameObject levelController;
+    public string killsCounterText = "/50";
+    public int maxKills = 50;
     public int Kills = 0;
 
     public int N;
@@ -35,8 +37,8 @@ public class KillsCounter : MonoBehaviour
 
     void Update()
     {
-        killsCountText.GetComponent<TMP_Text>().text = "Kills: " + Kills.ToString() + "/50";
-        if (Kills >= 50 && !levelController.GetComponent<PauseOnESC>().IsGamePaused)
+        killsCountText.GetComponent<TMP_Text>().text = "Kills: " + Kills.ToString() + killsCounterText;
+        if (Kills >= maxKills && !levelController.GetComponent<PauseOnESC>().IsGamePaused)
         {
             gameOverScreen.SetActive(true);
             gameOverText.GetComponent<TMP_Text>().text = "Victory";
