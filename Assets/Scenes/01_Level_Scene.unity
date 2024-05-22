@@ -15870,6 +15870,11 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[12]
       value: 
       objectReference: {fileID: 868894589}
+    - target: {fileID: 8853291096405898935, guid: e0d491f22134d88478cc961a5d5ada84,
+        type: 3}
+      propertyPath: m_Speed
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0d491f22134d88478cc961a5d5ada84, type: 3}
 --- !u!1001 &1235002963
@@ -26188,6 +26193,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dde4ad11e7d16e944bbd6c4d7174a4fc, type: 3}
+--- !u!1 &2073053199 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6345266380298941576, guid: a9df79eb7d566ea419e92df696125765,
+    type: 3}
+  m_PrefabInstance: {fileID: 2557254694649749018}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2078898976 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5515764004258341135, guid: d637864fd6d99f24c976d61f894c2ae5,
@@ -26726,7 +26737,7 @@ PrefabInstance:
     - target: {fileID: 5921846054328055670, guid: cd9346fff7ab97b48973b218b8fd9a20,
         type: 3}
       propertyPath: minSpawnDelay
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5921846054328055670, guid: cd9346fff7ab97b48973b218b8fd9a20,
         type: 3}
@@ -27528,6 +27539,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7487505344752385343, guid: 2e81988d315601d4fbbe9c47c607513b,
         type: 3}
+      propertyPath: maxKills
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7487505344752385343, guid: 2e81988d315601d4fbbe9c47c607513b,
+        type: 3}
+      propertyPath: wolfBody
+      value: 
+      objectReference: {fileID: 1746183464}
+    - target: {fileID: 7487505344752385343, guid: 2e81988d315601d4fbbe9c47c607513b,
+        type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1215317634}
@@ -27556,6 +27577,11 @@ PrefabInstance:
       propertyPath: levelController
       value: 
       objectReference: {fileID: 1215317634}
+    - target: {fileID: 7487505344752385343, guid: 2e81988d315601d4fbbe9c47c607513b,
+        type: 3}
+      propertyPath: nextLevelButton
+      value: 
+      objectReference: {fileID: 2073053199}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e81988d315601d4fbbe9c47c607513b, type: 3}
 --- !u!1001 &5781626671750564935

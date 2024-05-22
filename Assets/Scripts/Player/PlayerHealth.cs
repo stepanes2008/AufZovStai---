@@ -65,7 +65,6 @@ public class PlayerHealth : MonoBehaviour
     }
     private void DeathPause()
     {
-        Debug.Log("+");
         Time.timeScale = 0;
     }
 }
