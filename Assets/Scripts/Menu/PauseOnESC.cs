@@ -41,7 +41,6 @@ public class PauseOnESC : MonoBehaviour
         }
         else if (canPlay)
         {
-            Debug.Log(1);
             GetComponent<AudioSource>().Play();
             canPlay = false;
         }
