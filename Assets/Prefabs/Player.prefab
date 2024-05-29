@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 8085612486224472884}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -238,7 +238,12 @@ MonoBehaviour:
   killsCountText: {fileID: 2258616103251516386, guid: df2f1799328f73c4db3dcfe911c9473a,
     type: 3}
   levelController: {fileID: 0}
+  wolfBody: {fileID: 0}
+  killsCounterText: /50
+  maxKills: 50
   Kills: 0
+  nextLevelButton: {fileID: 0}
+  Victory: 0
   N: 0
 --- !u!114 &3193606277218588543
 MonoBehaviour:

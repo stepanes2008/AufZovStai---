@@ -20,8 +20,7 @@ public class SphereController : MonoBehaviour
     }
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("+");
-        if (collision.gameObject.GetComponent<Move>() != null)
+        if (collision.gameObject.tag == "Player")
         {
             DamageEnemy(collision);
         }
