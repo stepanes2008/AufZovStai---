@@ -34,10 +34,6 @@ public class CircusAI : MonoBehaviour
                 Debug.Log("You are noticed!");
             }
         }*/
-        if (player.GetComponent<KillsCounter>().Victory)
-        {
-            Destroy(gameObject);
-        }
 
         PatrolUpdate();
         AttackUpdate();

@@ -406,6 +406,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 57530560}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &60231553 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1595393448567944340, guid: 0f96922cb5316ed44bbdffa5c1604bdd,
+    type: 3}
+  m_PrefabInstance: {fileID: 583274822}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &63278696
 GameObject:
   m_ObjectHideFlags: 0
@@ -12029,6 +12035,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6301706116672326506, guid: 0f96922cb5316ed44bbdffa5c1604bdd,
+        type: 3}
+      propertyPath: Circus
+      value: 
+      objectReference: {fileID: 1891304346}
     - target: {fileID: 6320467473881983436, guid: 0f96922cb5316ed44bbdffa5c1604bdd,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -17859,6 +17870,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 187578668161787047, guid: cd9346fff7ab97b48973b218b8fd9a20,
+        type: 3}
+      propertyPath: pauseScreen
+      value: 
+      objectReference: {fileID: 1476284820}
     - target: {fileID: 4699137124357040349, guid: cd9346fff7ab97b48973b218b8fd9a20,
         type: 3}
       propertyPath: player
@@ -17924,6 +17940,31 @@ PrefabInstance:
       propertyPath: SpawnPoints.Array.data[3]
       value: 
       objectReference: {fileID: 583274823}
+    - target: {fileID: 5522841421142575550, guid: cd9346fff7ab97b48973b218b8fd9a20,
+        type: 3}
+      propertyPath: ParticleSystems.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5522841421142575550, guid: cd9346fff7ab97b48973b218b8fd9a20,
+        type: 3}
+      propertyPath: ParticleSystems.Array.data[0]
+      value: 
+      objectReference: {fileID: 707745707}
+    - target: {fileID: 5522841421142575550, guid: cd9346fff7ab97b48973b218b8fd9a20,
+        type: 3}
+      propertyPath: ParticleSystems.Array.data[1]
+      value: 
+      objectReference: {fileID: 63278699}
+    - target: {fileID: 5522841421142575550, guid: cd9346fff7ab97b48973b218b8fd9a20,
+        type: 3}
+      propertyPath: ParticleSystems.Array.data[2]
+      value: 
+      objectReference: {fileID: 1863576809}
+    - target: {fileID: 5522841421142575550, guid: cd9346fff7ab97b48973b218b8fd9a20,
+        type: 3}
+      propertyPath: ParticleSystems.Array.data[3]
+      value: 
+      objectReference: {fileID: 292495074}
     - target: {fileID: 5921846054328055670, guid: cd9346fff7ab97b48973b218b8fd9a20,
         type: 3}
       propertyPath: wolf
@@ -18068,6 +18109,11 @@ PrefabInstance:
       propertyPath: wolfBody
       value: 
       objectReference: {fileID: 117283417}
+    - target: {fileID: 7487505344752385343, guid: 2e81988d315601d4fbbe9c47c607513b,
+        type: 3}
+      propertyPath: Explosion
+      value: 
+      objectReference: {fileID: 60231553}
     - target: {fileID: 7487505344752385343, guid: 2e81988d315601d4fbbe9c47c607513b,
         type: 3}
       propertyPath: gameOverText
@@ -25993,7 +26039,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1891304346}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.095766805
   m_Height: 0.2887725
   m_Direction: 1

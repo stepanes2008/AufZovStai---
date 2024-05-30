@@ -5,6 +5,7 @@ using UnityEngine;
 public class FastEnemyCreator : MonoBehaviour
 {
     public GameObject[] SpawnPoints;
+    public ParticleSystem[] ParticleSystems;
     public bool IsWorking = true;
     public WolfAI wolf;
     public int Enemies = 10;
@@ -23,6 +24,7 @@ public class FastEnemyCreator : MonoBehaviour
             for (int point = 0; point < SpawnPoints.Length; point++)
             {
                 Instantiate(wolf, SpawnPoints[point].transform.position, Quaternion.Euler(0, Random.Range(0, 360), 0));
+                ParticleSystems[point].Play();
             }
             float delay = Random.Range(minSpawnDelay, 7f);
             Enemies+=4;

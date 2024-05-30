@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.010487316, g: 0.05298409, b: 0.1531921, a: 1}
+  m_IndirectSpecularColor: {r: 0.030117588, g: 0.078683235, b: 0.16928002, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7671,6 +7671,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b35410a914afde4478e7f85f2a9999b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1203482326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203482323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7574a82dc16ff634dbdba6bdf00d697c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpawnPoints:
+  - {fileID: 1348650212}
+  - {fileID: 1351519623}
+  - {fileID: 1836246821}
+  - {fileID: 415644313}
+  - {fileID: 1491535738}
+  - {fileID: 901255304}
+  - {fileID: 688837767}
+  - {fileID: 1046102131}
+  - {fileID: 1389993275}
+  - {fileID: 1195544332}
+  - {fileID: 1828244670}
+  - {fileID: 878194119}
+  - {fileID: 980750080}
+  IsWorking: 1
+  wolf: {fileID: 229210953}
+  Enemies: 0
+  _maxEnemiesCreated: 80
+  minSpawnDelay: 0
 --- !u!114 &1203482328 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 187578668161787047, guid: cd9346fff7ab97b48973b218b8fd9a20,
@@ -11668,7 +11699,8 @@ PrefabInstance:
       propertyPath: SpawnPoints.Array.data[12]
       value: 
       objectReference: {fileID: 980750080}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5522841421142575550, guid: cd9346fff7ab97b48973b218b8fd9a20, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cd9346fff7ab97b48973b218b8fd9a20, type: 3}
 --- !u!1 &1902680754 stripped
 GameObject:

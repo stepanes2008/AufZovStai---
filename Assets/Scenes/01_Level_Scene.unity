@@ -15041,6 +15041,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec5b1d2a3ee4a7340813b507f339c6ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1215317637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215317634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7574a82dc16ff634dbdba6bdf00d697c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpawnPoints:
+  - {fileID: 1985166131}
+  - {fileID: 258546861}
+  - {fileID: 1071594865}
+  - {fileID: 1278708816}
+  - {fileID: 1754922152}
+  - {fileID: 512257285}
+  - {fileID: 666180795}
+  - {fileID: 1858785824}
+  - {fileID: 49710347}
+  - {fileID: 1388451297}
+  - {fileID: 1479030646}
+  - {fileID: 707448}
+  - {fileID: 1103879079}
+  IsWorking: 1
+  wolf: {fileID: 1701124749}
+  Enemies: 0
+  _maxEnemiesCreated: 55
+  minSpawnDelay: 0
 --- !u!82 &1215317640
 AudioSource:
   m_ObjectHideFlags: 0
@@ -26907,7 +26938,8 @@ PrefabInstance:
       propertyPath: SpawnPoints.Array.data[12]
       value: 
       objectReference: {fileID: 1103879079}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5522841421142575550, guid: cd9346fff7ab97b48973b218b8fd9a20, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cd9346fff7ab97b48973b218b8fd9a20, type: 3}
 --- !u!1001 &2557254694649749018
 PrefabInstance:

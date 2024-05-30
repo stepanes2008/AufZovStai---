@@ -12,6 +12,7 @@ public class KillsCounter : MonoBehaviour
     public GameObject killsCountText;
     public GameObject levelController;
     public GameObject wolfBody;
+    public GameObject Explosion;
     public string killsCounterText = "/50";
     public int maxKills = 50;
     public int Kills = 0;
@@ -52,6 +53,7 @@ public class KillsCounter : MonoBehaviour
             Victory = true;
             GetComponent<Move>().enabled = false;
             GetComponent<CameraRotation>().enabled = false;
+            Explosion.GetComponent<SizeIncrease>().Death = true;
             Invoke("DeathPause", 2);
         }
     }
